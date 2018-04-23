@@ -28,9 +28,12 @@ export default {
   },
   methods: {
     toggle: function (num) {
-      // console.log(this)
-      // console.log(this.$el)
-      // console.log(this.$el.children)
+      // [jwc]+x
+      console.log('1')
+      console.log(this)
+      console.log(this.$el)
+      console.log(this.$el.children)
+
       // 設定參數作為指定 children 的區別
       if (this.$el.children[num].classList.contains('open')) {
         // console.log("if")
