@@ -24,15 +24,11 @@
   },
   "repository": {
     "type": "git",
-    // [jwc]+1 "url": "git+https://github.com/WeiChiaChang/vue-accordion-menu.git"
-    "url": "git+https://github.com/jasonc1025/VueJs--vue-accordion-menu--WeiChiaChang.git"
-    
+    "url": "git+https://github.com/jasonc1025/VueJs--vue-accordion-menu--WeiChiaChang.git"  
   },
   "bugs": {
-    // [jwc]+1 "url": "https://github.com/WeiChiaChang/vue-accordion-menu/issues"
     "url": "https://github.com/jasonc1025/VueJs--vue-accordion-menu--WeiChiaChang/issues"
   },
-  // [jwc] +1 "homepage": "https://github.com/WeiChiaChang/vue-accordion-menu#readme",
   "homepage": "https://github.com/jasonc1025/VueJs--vue-accordion-menu--WeiChiaChang#readme",
   "devDependencies": {
     "babel-core": "^6.0.0",
