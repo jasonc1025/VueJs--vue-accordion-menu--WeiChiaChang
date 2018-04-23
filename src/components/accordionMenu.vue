@@ -5,7 +5,8 @@
       <div class="faq-content" style="display: none;">
         <!-- [jwc] orig <p>{{item.msg}}</p> -->
         <!-- Y <p><span v-html="item.msg"></span></p> -->
-        <p><span class="fade-in" v-html="item.msg"></span></p>
+        <!-- Y <p><span class="fade-in" v-html="item.msg"></span></p> -->
+        <p><span class="fade-in" v-html="item.msg">1</span></p>
       </div>
     </div>
   </div>
