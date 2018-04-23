@@ -7,6 +7,11 @@
         <!-- Y <p><span v-html="item.msg"></span></p> -->
         <!-- Y <p><span class="fade-in" v-html="item.msg"></span></p> -->
         <p><span class="fade-in" v-html="item.msg"></span></p>
+
+        <div class="faq-content" v-for="(item2, index2) in item.sub">
+          <p><span class="fade-in" v-html="item2.test"></span></p>
+        </div>
+
       </div>
     </div>
   </div>
