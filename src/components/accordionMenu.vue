@@ -1,6 +1,6 @@
 <template>
   <div class="faq-container">
-    <div class="faq-question" v-on:click="toggle(index)" v-for="(item, index) in contents">
+    <div class="faq-question" v-on:click="toggle(index)" v-for="(item, index) in items_Stage01">
       <div class="faq-description"><span class="faq-number">{{index + 1}}</span>{{item.title}}<span>+</span></div>
       <div class="faq-content" style="display: none;">
         <!-- [jwc] orig <p>{{item.msg}}</p> -->
@@ -8,8 +8,8 @@
         <!-- Y <p><span class="fade-in" v-html="item.msg"></span></p> -->
         <p><span class="fade-in" v-html="item.msg"></span></p>
 
-        <div class="faq-content" v-for="(item2, index2) in item.sub">
-          <p><span class="fade-in" v-html="item2.test"></span></p>
+        <div class="faq-content" v-for="(itemSub, indexSub) in item.itemsSub">
+          <p><span class="fade-in" v-html="itemSub.text"></span></p>
         </div>
 
       </div>
@@ -21,7 +21,7 @@
 export default {
   name: 'vue-accordion-menu',
   props: {
-    contents: {
+    items_Stage01: {
       type: Array,
       default: [
         {
