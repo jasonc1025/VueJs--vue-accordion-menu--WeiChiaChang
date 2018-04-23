@@ -8,7 +8,8 @@
   transition: all 0.3s;
 }
 .faq-content[data-v-656f4e42] {
-  padding: 20px 40px;
+  /* [jwc] remove top padding to not compete w/ 'faq-description' bottom padding: orig: padding: 20px 40px; */
+  padding: 00px 40px 20px 40px;
 }
 .faq-description[data-v-656f4e42] {
   font-size: 24px;
@@ -25,7 +26,7 @@
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  transition: all 0.3s;  /* [jwc] This appears to work  */
   position: absolute;
   right: 20px;
   top: 0px;
@@ -70,7 +71,7 @@
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+  transform: rotate(45deg);  /* [jwc] this works */
   font-weight: normal;
 }
 @media (max-width: 767px) {
@@ -93,3 +94,19 @@
     top: 8px;
 }
 }
+.fade-in[data-v-656f4e42] {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+}
+@keyframes fadeInOpacity {
+0% {
+		opacity: 0;
+}
+100% {
+		opacity: 1;
+}
+}
+

@@ -3,7 +3,9 @@
     <div class="faq-question" v-on:click="toggle(index)" v-for="(item, index) in contents">
       <div class="faq-description"><span class="faq-number">{{index + 1}}</span>{{item.title}}<span>+</span></div>
       <div class="faq-content" style="display: none;">
-        <p>{{item.msg}}</p>
+        <!-- [jwc] orig <p>{{item.msg}}</p> -->
+        <!-- Y <p><span v-html="item.msg"></span></p> -->
+        <p><span class="fade-in" v-html="item.msg"></span></p>
       </div>
     </div>
   </div>
@@ -60,7 +62,8 @@ export default {
 }
 
 .faq-content {
-  padding: 20px 40px;
+  /* [jwc] remove top padding to not compete w/ 'faq-description' bottom padding: orig: padding: 20px 40px; */
+  padding: 00px 40px 20px 40px;
 }
 
 .faq-description {
@@ -79,7 +82,7 @@ export default {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  transition: all 0.3s;  /* [jwc] This appears to work  */
   position: absolute;
   right: 20px;
   top: 0px;
@@ -129,7 +132,7 @@ export default {
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+  transform: rotate(45deg);  /* [jwc] this works */
   font-weight: normal;
 }
 
@@ -156,4 +159,22 @@ export default {
     top: 8px;
   }
 }
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 </style>
