@@ -41,16 +41,25 @@ export default {
 
       // 設定參數作為指定 children 的區別
       if (this.$el.children[num].classList.contains('open')) {
-        // console.log("if")
+        
+        // [jwc]
+        console.log("if")
+        
         this.$el.children[num].classList.remove('open')
+        // also close its children
         this.$el.children[num].querySelectorAll('.faq-content')[0].style.display = 'none'
       } else {
-        // console.log("else")
-        var prevFaqQuestion = this.$el.querySelectorAll('.open')
-        if (prevFaqQuestion.length !== 0) {
-          prevFaqQuestion[0].classList.remove('open')
-          prevFaqQuestion[0].querySelectorAll('.faq-content')[0].style.display = 'none'
-        }
+
+        // [jwc]
+        console.log("else")
+        
+        // [jwc]+x
+        // close all other peers first, before opening targeted one
+        // var prevFaqQuestion = this.$el.querySelectorAll('.open')
+        // if (prevFaqQuestion.length !== 0) {
+        //   prevFaqQuestion[0].classList.remove('open')
+        //   prevFaqQuestion[0].querySelectorAll('.faq-content')[0].style.display = 'none'
+        // }
         this.$el.children[num].classList.add('open')
         this.$el.children[num].querySelectorAll('.faq-content')[0].style.display = ''
       }
