@@ -70,7 +70,7 @@ export default {
 
 <style scoped>
 .faq-container {
-  width: 600px;
+  width: 800px; /* orig: 600px; */
   margin: 0 auto;
 }
 
