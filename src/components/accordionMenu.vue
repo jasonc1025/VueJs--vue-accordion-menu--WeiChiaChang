@@ -41,18 +41,15 @@ export default {
 
       // 設定參數作為指定 children 的區別
       if (this.$el.children[num].classList.contains('open')) {
-        
         // [jwc]
-        console.log("if")
-        
+        console.log('if')
+
         this.$el.children[num].classList.remove('open')
         // also close its children
         this.$el.children[num].querySelectorAll('.faq-content')[0].style.display = 'none'
       } else {
-
         // [jwc]
-        console.log("else")
-        
+        console.log('else')
         // [jwc]+x
         // close all other peers first, before opening targeted one
         // var prevFaqQuestion = this.$el.querySelectorAll('.open')
